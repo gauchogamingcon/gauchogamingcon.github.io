@@ -1,0 +1,54 @@
+theme: jekyll-theme-minimal
+title: Joshua's homepage
+description: Bookmark this to keep an eye on my project updates!
+
+permalink: pretty
+
+collections_dir: collections
+
+collections:
+# GGCon Collections ---------------
+  talents:
+      output: true
+      permalink: /talents/:name/
+  homepage:
+    output: false
+    permalink: /homepage/:name/
+  workshops:
+    output: true
+    permalink: /workshops/:name/
+  events:
+    output: true
+    permalink: /events/:name/
+  registration:
+    output: true
+    permalink: /registration/:name/
+  about:
+    output: true
+    permalink: /about/:name/
+  faq:
+    output: true
+    permalink: /faq/:name/
+  eventmap:
+    output: true
+    permalink: /eventmap/:name/
+
+
+defaults:
+  # Portfolio Defaults ---------------
+  - scope: { type: talents }
+    values: { layout: base }
+  - scope: { type: homepage }
+    values: { layout: base }
+  - scope: { type: workshops }
+    values: { layout: base }
+  - scope: { type: events }
+    values: { layout: base }
+  - scope: { type: registration }
+    values: { layout: base }
+  - scope: { type: about }
+    values: { layout: base }
+  - scope: { type: faq }
+    values: { layout: base }
+  - scope: { type: eventmap }
+    values: { layout: base }

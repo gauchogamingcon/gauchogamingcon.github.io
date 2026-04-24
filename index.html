@@ -1,0 +1,27 @@
+---
+layout: base
+custom_js: /js/advanced-content-loader.js
+page_type: homepage
+---
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="container">
+        <!-- HERO -->
+        <div class="banner-image">
+            <img src="/assets/banner.png" alt="GGCon Banner">
+        </div>
+        <section id="about" class="section">
+            <div class="section-content">
+                {% assign about_content = site.homepage | where: "title", "About" | first %}
+                {{ about_content.content }}
+            </div>
+        </section>  
+        <section id="sponsor" class="section">
+            <div class="section-content">
+                {% assign sponsor_content = site.homepage | where: "title", "Sponsor" | first %}
+                {{ sponsor_content.content }}
+            </div>
+        </section>  
+    </main>
+</body>

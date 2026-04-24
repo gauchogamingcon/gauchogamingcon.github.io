@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About</title>
+    <meta name="description" content="TALENT ABOUT LONG DESCRIPTION" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    
+    
+
+</head>
+
+<body>
+    <header>
+        <div class="header-container" data-pageType="" data-layout="base" data-custom_js="">
+            <nav>
+                <div class="links">
+                    <a href="/">GGCon</a>
+                    <a href="/talents/" data-short="Games">Talents</a>
+                    <a href="/workshops/" data-short="Workshops">Workshop/Panels</a>
+                    <a href="/schedule/" data-short="Schedule">Schedule</a>
+                    <a href="/eventmap/" data-short="EventMap">Event Map</a>
+                    <a href="/registration/" data-short="Registration">Registration</a>
+                    <a href="/faq/" data-short="FAQ">FAQ</a>
+                    <a href="/about/" data-short="About">About</a>
+                </div>
+            </nav>
+        </div>
+        <div class="header-container mobile" data-pageType="" data-layout="base" data-custom_js="">
+
+            <nav>
+                <div class="links">
+                    <a href="/">GGCon</a>
+                    <a href="/talents/" data-short="Games">Talents</a>
+                    <a href="/workshops/" data-short="Workshops">Workshop/Panels</a>
+                    <a href="/schedule/" data-short="Schedule">Schedule</a>
+                    <a href="/eventmap/" data-short="EventMap">Event Map</a>
+                    <a href="/registration/" data-short="Registration">Registration</a>
+                    <a href="/faq/" data-short="FAQ">FAQ</a>
+                    <a href="/about/" data-short="About">About</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="content-container" class="content-loading">
+        <h1 id="talent-page">TALENT PAGE</h1>
+<p>ABOUT ABOUT ABOUT ABOUT ABOUTABOUTABOUTABOUTABOUTABOUT</p>
+
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <nav>
+                <div class="links">
+                    <a href="https://discord.gg/25AXjN8TBN" target="_blank" class="fa-brands fa-discord"></a>
+                    <a href="https://twitter.com/gauchogaming?lang=en" target="_blank" class="fa-brands fa-x"></a>
+                    <a href="https://instagram.com/GauchoGaming" target="_blank" class="fa-brands fa-instagram"></a>
+                    <a href="https://www.tiktok.com/@gaucho_gaming" target="_blank" class="fa-brands fa-tiktok"></a>
+                    <a href="https://www.facebook.com/GauchoGaming" target="_blank" class="fa-brands fa-facebook"></a>
+                    <a href="https://www.twitch.tv/gaucho_gaming" target="_blank" class="fa-brands fa-twitch"></a>
+                </div>
+            </nav>
+        </div>
+        <div class="footer-container mobile">
+            <nav>
+                <div class="links">
+                    <a href="https://discord.gg/25AXjN8TBN" target="_blank" class="fa-brands fa-discord"></a>
+                    <a href="https://twitter.com/gauchogaming?lang=en" target="_blank" class="fa-brands fa-x"></a>
+                    <a href="https://instagram.com/GauchoGaming" target="_blank" class="fa-brands fa-instagram"></a>
+                    <a href="https://www.tiktok.com/@gaucho_gaming" target="_blank" class="fa-brands fa-tiktok"></a>
+                    <a href="https://www.facebook.com/GauchoGaming" target="_blank" class="fa-brands fa-facebook"></a>
+                    <a href="https://www.twitch.tv/gaucho_gaming" target="_blank" class="fa-brands fa-twitch"></a>
+                </div>
+            </nav>
+        </div>
+    </footer>
+
+
+</body>
+</html>
+
+
+<script>    
+
+    console.log(document.querySelector('.header-container').dataset.pageType);
+    console.log(document.querySelector('.header-container').dataset.layout);
+
+    if (!document.querySelector('.header-container').dataset.custom_js) {
+        console.log('Removing content-loading class due to custom_js not being set');
+        document.querySelector('#content-container').classList.remove('content-loading');
+    }
+
+    if (document.querySelector('#no-playtesters')) {
+        document.querySelector('#acknowledgements').style.display = 'none';
+    }
+
+    // Toggle notes dropdown
+    function toggleNotes(arrowElement) {
+        const dropdown = arrowElement.parentElement.querySelector('.notes-dropdown');
+        const isVisible = dropdown.style.display !== 'none';
+        
+        if (isVisible) {
+            dropdown.style.display = 'none';
+            arrowElement.textContent = '▶';
+        } else {
+            dropdown.style.display = 'block';
+            arrowElement.textContent = '▼';
+        }
+    }
+
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        // Auto-load content from data attributes
+        loadAllContent();
+        const html = document.querySelector('html');
+        console.log('Loading content: ' + html.innerHTML);
+        html.innerHTML = convertToDivs(extractContentFromHtml(html.innerHTML));
+        console.log('Loading content: ' + html.innerHTML);
+        document.querySelector('#content-container').classList.remove('content-loading');
+    });
+</script>

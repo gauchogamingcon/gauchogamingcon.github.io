@@ -1,0 +1,33 @@
+---
+layout: base
+custom_js: /js/advanced-content-loader.js
+page_type: talents
+---
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="container">
+        <section class="intro-content">
+            <div class="section-content">
+                {% assign about_content = site.talents | where: "title", "About" | first %}
+                {{ about_content.content }}
+            </div>
+        </section>  
+        <section id="talents" class="section">
+            <div class="section-content">
+                <div class="two-col">
+                    {% for talent in site.talents %}
+                        {% unless talent.title == "About" %}
+                        <div class="project-card">
+                            <a class="project-title" href="{{ talent.url }}" target="_blank" rel="noopener">{{ talent.title }}</a>
+                            <div class="project-description">{{ talent.short_description }}</div>
+                            <img class="project-image" src="{{ talent.image }}" alt="{{ talent.title }}" />
+                            <a class="project-link" href="{{ talent.url }}" target="_blank" rel="noopener">View Talent</a>
+                        </div>
+                        {% endunless %}
+                    {% endfor %}
+                </div>
+            </div>
+        </section>  
+    </main>
+</body>

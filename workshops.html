@@ -1,0 +1,31 @@
+---
+layout: base
+custom_js: /js/advanced-content-loader.js
+page_type: workshops
+---
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="container">
+        <section class="intro-content">
+            <div class="section-content">
+                {% assign about_content = site.workshops | where: "title", "About" | first %}
+                {{ about_content.content }}
+            </div>
+        </section>  
+        <section id="workshops" class="section">
+            <div class="section-content">
+                {% for workshop in site.workshops %}
+                    {% unless workshop.title == "About" %}
+                    <div class="project-card">
+                        <a class="project-title" href="{{ workshop.url }}" target="_blank" rel="noopener">{{ workshop.title }}</a>
+                        <div class="project-description">{{ workshop.short_description }}</div>
+                        <img class="project-image" src="{{ workshop.image }}" alt="{{ workshop.title }}" />
+                        <a class="project-link" href="{{ workshop.url }}" target="_blank" rel="noopener">View Workshop</a>
+                    </div>
+                    {% endunless %}
+                {% endfor %}
+            </div>
+        </section>  
+    </main>
+</body>

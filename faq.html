@@ -1,0 +1,20 @@
+---
+layout: base
+custom_js: /js/advanced-content-loader.js
+page_type: faq
+---
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="container">
+        <div class="banner-image">
+            <img src="/assets/FAQ_1.JPG" alt="GGCon Banner">
+        </div>
+        <section id="faq" class="section">
+            <div class="section-content">
+                {% assign faq_content = site.faq | where: "title", "FAQ" | first %}
+                {{ faq_content.content }}
+            </div>
+        </section>  
+    </main>
+</body>

@@ -1,0 +1,17 @@
+---
+layout: base
+custom_js: /js/advanced-content-loader.js
+page_type: about
+---
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="container">
+        <section id="about" class="section">
+            <div class="section-content">
+                {% assign about_content = site.about | where: "title", "About" | first %}
+                {{ about_content.content }}
+            </div>
+        </section>  
+    </main>
+</body>

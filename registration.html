@@ -1,0 +1,26 @@
+---
+layout: base
+custom_js: /js/advanced-content-loader.js
+page_type: homepage
+---
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="container">
+        <!-- HERO -->
+        <div class="banner-image">
+            <img src="/assets/REGISTRATION_1.JPG" alt="GGCon Banner">
+        </div>
+        <section id="register" class="section">
+            <div class="section-content">
+                <a href="https://www.eventbrite.com/e/gaucho-gaming-con-2026-sponsored-by-seasonic-tickets-1988114019551" target="_blank">Register Now</a>
+            </div>
+        </section>  
+        <section id="copyright" class="section">
+            <div class="section-content">
+                {% assign copyright_content = site.registration | where: "title", "Copyright" | first %}
+                {{ copyright_content.content }}
+            </div>
+        </section>  
+    </main>
+</body>
