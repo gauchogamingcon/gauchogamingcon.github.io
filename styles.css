@@ -79,7 +79,7 @@ li {
 
 /* Container */
 .container {
-    margin-inline: auto;
+    /*margin-inline: auto; */
     flex: 1;
 }
 
@@ -904,6 +904,46 @@ li.acknowledgement.notes{
     height: auto;
     object-fit: cover;
     display: block;
+}
+
+.homepage-splash {
+    margin: 0;
+    height: 600px;
+    max-height: 600px;
+    padding: 0 10%;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-splash {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -10%;
+    right: -10%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(1px);
+}
+
+.homepage-logo {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 100vw;
+    max-height: 500px;
+}
+
+.homepage-logo .logo {
+    object-fit: contain;
+    width: 50%;
+}
+
+.homepage-logo .content {
+    object-fit: cover;
+    width: 50%;
+    clip-path: circle(40%);
 }
 
 .sponsor-logo {

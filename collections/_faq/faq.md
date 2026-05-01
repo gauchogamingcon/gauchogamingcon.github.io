@@ -23,4 +23,4 @@ To attend any of our FOUR panels, you MUST have registered on <a href="/registra
 INCLUDE EVENTBRITE HYPERLINK (OR REFER THEM TO THE WEBSITE [REGISTRATION] TAB
 
 ## Where can I register to compete in a game? 
-Sign-ups for our competitive games can be found on our <a href="https://linktr.ee/gauchogaming" target="_blank">LinkTree</a>! Refer to each sign-up for deadlines! 
+Sign-ups for our competitive games can be found on our <a href="https://linktr.ee/gauchogaming" target="_blank">LinkTree</a>! Refer to each sign-up for deadlines!
