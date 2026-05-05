@@ -5,6 +5,7 @@
 :root {
     --bg: #e7e9d8;
     --fg: #03695e;
+    --bright: #6daf5f;
     --muted: #239dca;
     --brand: #58c4ff;
     --card: #d1d3c3;
@@ -110,8 +111,7 @@ li {
 header {
     position: sticky;
     top: 0;
-    backdrop-filter: saturate(180%) blur(10px);
-    background: linear-gradient(180deg, var(--header), var(--header-light));
+    background-color: var(--bright);
     border-bottom: 1px solid var(--border);
     z-index: 10;
     width: 100%;
@@ -132,15 +132,20 @@ nav .links {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 600;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
 nav a {
-    color: var(--fg);
+    color: var(--bg);
     opacity: 0.9;
+}
+
+.nav-logo {
+    max-height: 50px;
 }
 
 /* Responsive navigation text */
@@ -945,32 +950,73 @@ li.acknowledgement.notes{
 }
 
 .splash-info {
+    position:relative;
     padding-left: 1%;
-    max-width: 55%;
+    max-width: 50%;
+}
+.splash-info.paragraph {
+    top: -10%;
 }
 
 .splash-info .title {
     position: relative;
     color: var(--muted);
-    font-size: clamp(1rem, 2.25vw, 2.25rem);
+    font-size: clamp(1rem, 2.25vw, 1.75rem);
     font-weight: 700;
-    top: 10%;
+    top: 20%;
 }
 
 .splash-info .header {
     position: relative;
     color: var(--muted);
-    font-size: clamp(1rem, 2vw, 2rem);
+    font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: 600;
-    top: 10%;
+    top: 20%;
 }
 .splash-info .paragraph {
     position: relative;
     color: var(--muted);
-    font-size: clamp(1rem, 1.75vw, 1.5rem);
+    font-size: clamp(1rem, 1.75vw, 1.25rem);
     font-weight: 400;
-    top: -50%;
 }
+
+.homepage-splash-content .two-col {
+    position: relative;
+    top: -10%;
+    max-width: 55%;
+    flex-wrap: nowrap;
+}
+
+
+.register-button{
+    border-radius: 8px;
+    padding: 12px 4px;
+    width: 100%;
+    max-width: 125px;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: 600;
+    background-color: var(--bg);
+    color: var(--bright);
+}
+
+.homepage-button {
+    background-color: var(--bg);
+    border-radius: 8px;
+    padding: 12px 4px;
+    width: 100%;
+    max-width: unset;
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.homepage-button.register-button{
+    background-color: var(--bright);
+    color: var(--bg);
+}
+
 
 .background-splash-container::after {
     content: "";
