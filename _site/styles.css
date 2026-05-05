@@ -920,6 +920,8 @@ li.acknowledgement.notes{
     top: -250%;
     left: -10%;
     right: -10%;
+    width: 500%;
+    max-width: 3000px;
     object-fit: cover;
     z-index: -1;
     filter: blur(3px);
@@ -935,11 +937,39 @@ li.acknowledgement.notes{
 
     height: 100%;
     width: 100%;
+    max-width: 1000px;
+
+    margin: auto;
+
 
 }
 
 .splash-info {
+    padding-left: 1%;
+    max-width: 55%;
+}
 
+.splash-info .title {
+    position: relative;
+    color: var(--muted);
+    font-size: clamp(1rem, 2.25vw, 2.25rem);
+    font-weight: 700;
+    top: 10%;
+}
+
+.splash-info .header {
+    position: relative;
+    color: var(--muted);
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: 600;
+    top: 10%;
+}
+.splash-info .paragraph {
+    position: relative;
+    color: var(--muted);
+    font-size: clamp(1rem, 1.75vw, 1.5rem);
+    font-weight: 400;
+    top: -50%;
 }
 
 .background-splash-container::after {
@@ -965,6 +995,7 @@ li.acknowledgement.notes{
 .homepage-logo .logo {
     object-fit: contain;
     width: 60%;
+    max-height: 420px;
 }
 
 .homepage-logo .content-img-container {
@@ -979,6 +1010,7 @@ li.acknowledgement.notes{
     height: 100%;
     clip-path: circle(50%);
     z-index: 2;
+    max-height: 500px;
 }
 
 .homepage-logo .content-background {
@@ -986,8 +1018,9 @@ li.acknowledgement.notes{
     z-index: 1;
     object-fit: cover;
     left: 50%;
-    width: 40%;
-    top:50%;
+    width: 45%;
+    max-width: 470px;
+    top: 45%;
     clip-path: inset(0 0 20% 0);
     transform: translate(0%, -50%) rotate(5deg);
 }
