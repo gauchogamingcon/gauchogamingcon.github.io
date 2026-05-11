@@ -990,11 +990,11 @@ li.acknowledgement.notes{
 
 .register-button{
     border-radius: 8px;
-    padding: 12px 4px;
-    width: 100%;
-    max-width: 125px;
+    padding: 12px 8px;
+    max-width: 145px;
     text-align: center;
-    font-size: 1vw;
+    font-size: 14px;
+    text-wrap: nowrap;
     font-weight: 600;
     background-color: var(--bg);
     color: var(--bright);
@@ -1041,7 +1041,7 @@ li.acknowledgement.notes{
 .homepage-logo .logo {
     object-fit: contain;
     width: 60%;
-    max-height: 420px;
+    max-height: 380px;
 }
 
 .homepage-logo .content-img-container {
@@ -1056,7 +1056,7 @@ li.acknowledgement.notes{
     height: 100%;
     clip-path: circle(50%);
     z-index: 2;
-    max-height: 500px;
+    max-height: 450px;
 }
 
 .homepage-logo .content-background {
@@ -1065,7 +1065,7 @@ li.acknowledgement.notes{
     object-fit: cover;
     left: 50%;
     width: 45%;
-    max-width: 470px;
+    max-width: 420px;
     top: 45%;
     clip-path: inset(0 0 20% 0);
     transform: translate(0%, -50%) rotate(5deg);
@@ -1075,11 +1075,27 @@ li.acknowledgement.notes{
     transform: translate(0%, -50%) rotate(5deg) scale(-1, -1);
 }
 
+.sponsors-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .sponsor-logo {
-    width: calc(100vw - (100vw - 100%));
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
+}
+
+.sponsor-logo.large {
+    width: calc(100vw - (100vw - 100%));
+}
+.sponsor-logo.medium {
+    width: calc(80vw - (80vw - 80%));
+}
+.sponsor-logo.small {
+    width: calc(25vw - (25vw - 25%));
 }
 
 /* ==========================================================================
@@ -1195,7 +1211,6 @@ li.acknowledgement.notes{
 .footer-container {
     width: 100%;
     margin: 0 auto;
-    color: var(--fg);
     box-sizing: border-box;
     max-width: calc(100vw - 48px);
     padding: 0 24px;
@@ -1210,8 +1225,7 @@ li.acknowledgement.notes{
 }
 
 footer {
-    backdrop-filter: saturate(180%) blur(10px);
-    background: linear-gradient(180deg, var(--header), var(--header-light));
+    background-color: var(--bright);
     border-top: 1px solid var(--border);
     z-index: 10;
     width: 100%;

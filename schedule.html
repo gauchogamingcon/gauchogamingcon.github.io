@@ -13,23 +13,10 @@ page_type: schedule
         </div>
         <section id="about" class="section">
             <div class="section-content">
-                {% assign about_content = site.schedule | where: "title", "About" | first %}
+                {% assign about_content = site.events | where: "title", "About" | first %}
                 {{ about_content.content }}
             </div>
         </section>  
-        <section id="workshops" class="section">
-            <div class="section-content">
-                {% for event in site.events %}
-                    {% unless event.title == "About" %}
-                    <div class="project-card">
-                        <a class="project-title" href="{{ event.url }}" target="_blank" rel="noopener">{{ event.title }}</a>
-                        <div class="project-description">{{ event.short_description }}</div>
-                        <img class="project-image" src="{{ event.image }}" alt="{{ event.title }}" />
-                        <a class="project-link" href="{{ event.url }}" target="_blank" rel="noopener">View Event</a>
-                    </div>
-                    {% endunless %}
-                {% endfor %}
-            </div>
         </section>  
     </main>
 </body>
