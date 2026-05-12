@@ -31,6 +31,15 @@ collections:
   eventmap:
     output: true
     permalink: /eventmap/:name/
+  vapanels:
+    output: true
+    permalink: /vapanels/:name/
+  vtuberpanels:
+    output: true
+    permalink: /vtuberpanels/:name/
+  tournaments:
+    output: true
+    permalink: /tournaments/:name/
 
 
 defaults:
@@ -50,4 +59,10 @@ defaults:
   - scope: { type: faq }
     values: { layout: base }
   - scope: { type: eventmap }
+    values: { layout: base }
+  - scope: { type: vapanels }
+    values: { layout: base }
+  - scope: { type: vtuberpanels }
+    values: { layout: base }
+  - scope: { type: tournaments }
     values: { layout: base }

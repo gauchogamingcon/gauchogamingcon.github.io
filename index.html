@@ -30,7 +30,7 @@ page_type: homepage
                     <div class="paragraph">Gaucho Gaming's 2026 GG Con features tournaments, voice actors, Vtubers, freeplay, and clubs!</div>
                 </div>
                 <div class="two-col">
-                    <a class="homepage-button register-button" href="/registration" target="_blank">Register Now</a>
+                    <a class="homepage-button register-button" href="https://www.eventbrite.com/e/gaucho-gaming-con-2026-sponsored-by-seasonic-tickets-1988114019551" target="_blank">Register Now</a>
                     <a class="homepage-button talents-button" href="/talents" target="_blank">View Talents</a>
                 </div>
             </div>
@@ -41,6 +41,12 @@ page_type: homepage
                 {{ about_content.content }}
             </div>
         </section>  
+        <section id="registration"  class="section">
+            <div class="section-content">
+                {% assign registration_content = site.registration | where: "title", "Registration" | first %}
+                {{ registration_content.content }}
+            </div>
+        </section>
         <section id="sponsor" class="section">
             <div class="section-content">
                 {% assign sponsor_content = site.homepage | where: "title", "Sponsor" | first %}

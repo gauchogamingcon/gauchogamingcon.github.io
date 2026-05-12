@@ -6,11 +6,26 @@ page_type: faq
 ---
 <body>
     <div id="header-placeholder"></div>
+    {% assign faq_content = site.faq | where: "title", "FAQ" | first %}
 
     <main class="container">
-        <div class="banner-image">
-            <img src="/assets/FAQ_1.JPG" alt="GGCon Banner">
+        <div class="banner-image-container">        
+            <div class="banner-image">
+                {% assign faq_banner_image = faq_content.banner_image %}
+                <img src="{{ faq_banner_image }}">
+            </div>
+            <div class="banner-info section-content">
+                <div class="banner-title"> About Gaucho Gaming </div>   
+                <div class="banner-description"> Gaucho Gaming is University of California, Santa Barbara (UCSB)’s student-run gaming organization dedicated to building community through games, events, and creative collaboration. From tournaments, giveaways, and social nights to large-scale productions like GG Con, we bring students together through a shared love of gaming culture. </div>   
+
+            </div>
         </div>
+        <section id="about" class="section">
+            <div class="section-content">
+                {% assign about_content = site.about | where: "title", "About" | first %}
+                {{ about_content.content }}
+            </div>
+        </section>
         <section id="faq" class="section">
             <div class="section-content">
                 {% assign faq_content = site.faq | where: "title", "FAQ" | first %}

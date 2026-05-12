@@ -1,0 +1,33 @@
+---
+layout: base
+title: GGCon - VTuber Panels
+custom_js: /js/advanced-content-loader.js
+page_type: vtuberpanels
+---
+<body>
+    <div id="header-placeholder"></div>
+    {% assign vtuberpanels_content = site.vtuberpanels | where: "title", "About" | first %}
+
+    <main class="container">
+        <div class="banner-image-container">        
+            <div class="banner-image">
+                {% assign vtuberpanels_banner_image = vtuberpanels_content.banner_image %}
+                <img src="{{ vtuberpanels_banner_image }}">
+            </div>
+            <div class="banner-info section-content">
+                <div class="banner-title"> VTuber Panels </div>   
+                <div class="banner-description"> {{ vtuberpanels_content.description }} </div>   
+
+            </div>
+        </div>
+        <section id="panels" class="section">
+            <div class="section-content">
+                {% for panel in site.vtuberpanels %}
+                    {% unless panel.title == "About" %}
+                    {{ panel.content }}
+                    {% endunless %}
+                {% endfor %}
+            </div>
+        </section>  
+    </main>
+</body>

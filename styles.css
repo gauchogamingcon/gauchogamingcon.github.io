@@ -898,17 +898,57 @@ li.acknowledgement.notes{
     margin-bottom: 12px;
 }
 
+.banner-image-container {
+    position: relative;
+    overflow: hidden;
+}
+
 .banner-image {
     width: calc(100vw - (100vw - 100%));
-    max-width: 1000px;
+    max-height: 400px;
     margin: auto;
+    overflow: hidden;
+}
+
+.banner-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, color-mix(in srgb, var(--bg) 85%, transparent) 50%, color-mix(in srgb, var(--brand) 55%, transparent) 100%);
+    pointer-events: none;
 }
 
 .banner-image img {
     width: 100%;
+    max-height: 400px;
     height: auto;
     object-fit: cover;
     display: block;
+}
+
+.banner-info {
+    position: absolute;
+    color: var(--muted);
+    top: min(3vw, 100px);
+    left: 0;
+    right: 0;
+
+}
+
+.banner-title {
+    position: relative;
+    font-size: clamp(1.25rem, 3.25vw, 2.55rem);
+    font-weight: 600;
+}
+
+.banner-description {
+    position: relative;
+    color: var(--fg);
+    font-size: clamp(0.5rem, 2vw, 1.5rem);
+    font-weight: 600;
 }
 
 .homepage-splash {
@@ -955,7 +995,7 @@ li.acknowledgement.notes{
     max-width: 50%;
 }
 .splash-info.paragraph {
-    top: -10%;
+    top: calc(-1*min(6vw, 100px));
 }
 
 .splash-info .title {
@@ -982,7 +1022,7 @@ li.acknowledgement.notes{
 
 .homepage-splash-content .two-col {
     position: relative;
-    top: -10%;
+    top: calc(-1*min(3vw, 100px));
     max-width: 55%;
     flex-wrap: nowrap;
 }
@@ -1098,6 +1138,15 @@ li.acknowledgement.notes{
 }
 .sponsor-logo.small {
     width: 15%;
+}
+
+.tournament-container {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    overflow: hidden;
+    justify-content: space-between;
+    
 }
 
 /* ==========================================================================
@@ -1218,9 +1267,11 @@ li.acknowledgement.notes{
     padding: 0 24px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
     gap: 20vw;
-    
+    height: 150px;
+    max-height: 150px;
 }
 
 .footer-container.mobile {
@@ -1234,22 +1285,51 @@ li.acknowledgement.notes{
 footer {
     background-color: var(--bright);
     border-top: 1px solid var(--border);
+    height: 150px;
     max-height: 150px;
     z-index: 10;
     width: 100%;
     box-sizing: border-box;
     margin-top: auto;
+    overflow: hidden;
 }
 
 .footer-sponsors {
-    width: 50%
+    width: min(50%, 720px);
+    min-width: 0;
 }
 
 .footer-sponsors-title {
     font-size: 24px;
     font-weight: 600;
-    color: var(--bg)
+    line-height: 1.2;
+    color: var(--bg);
 }
+
+footer .sponsors-container {
+    align-items: center;
+    height: 96px;
+    overflow: hidden;
+}
+
+footer .sponsor-logo {
+    flex: 0 1 auto;
+    width: auto;
+    max-height: 72px;
+    max-width: 100%;
+}
+
+footer .sponsor-logo.large {
+    max-width: 35%;
+}
+
+footer .sponsor-logo.medium {
+    max-width: 20%;
+}
+
+footer .sponsor-logo.small {
+    max-width: 15%;
+    }
 /* ==========================================================================
    UTILITY CLASSES
    ========================================================================== */

@@ -1,0 +1,33 @@
+---
+layout: base
+title: GGCon - Voice Actor Panels
+custom_js: /js/advanced-content-loader.js
+page_type: vapanels
+---
+<body>
+    <div id="header-placeholder"></div>
+    {% assign vapanels_content = site.vapanels | where: "title", "About" | first %}
+
+    <main class="container">
+        <div class="banner-image-container">        
+            <div class="banner-image">
+                {% assign vapanels_banner_image = vapanels_content.banner_image %}
+                <img src="{{ vapanels_banner_image }}">
+            </div>
+            <div class="banner-info section-content">
+                <div class="banner-title"> Voice Actor Panels </div>   
+                <div class="banner-description"> {{ vapanels_content.description }} </div>   
+
+            </div>
+        </div>
+        <section id="panels" class="section">
+            <div class="section-content">
+                {% for panel in site.vapanels %}
+                    {% unless panel.title == "About" %}
+                    {{ panel.content }}
+                    {% endunless %}
+                {% endfor %}
+            </div>
+        </section>  
+    </main>
+</body>

@@ -6,14 +6,20 @@ page_type: talents
 ---
 <body>
     <div id="header-placeholder"></div>
+    {% assign talents_content = site.talents | where: "title", "About" | first %}
 
     <main class="container">
-        <section class="intro-content">
-            <div class="section-content">
-                {% assign about_content = site.talents | where: "title", "About" | first %}
-                {{ about_content.content }}
+        <div class="banner-image-container">        
+            <div class="banner-image">
+                {% assign talents_banner_image = talents_content.banner_image %}
+                <img src="{{ talents_banner_image }}">
             </div>
-        </section>  
+            <div class="banner-info section-content">
+                <div class="banner-title"> Talents </div>   
+                <div class="banner-description"> {{ talents_content.description }} </div>   
+
+            </div>
+        </div>
         <section id="talents" class="section">
             <div class="section-content">
                 <div class="two-col">

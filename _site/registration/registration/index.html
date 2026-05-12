@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registration</title>
+    <link rel="shortcut icon" type="image/png" href="http://localhost:4000/assets/logo.png">
+    <meta name="description" content="REGISTRATION COPYRIGHT LONG DESCRIPTION" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    
+    
+
+</head>
+
+<body>
+    <header>
+        <div class="header-container" data-pageType="" data-layout="base" data-custom_js="">
+            <nav>
+                <div>
+                    <img class="nav-logo" src="/assets/Website Pictures/LOGOS/GGCON_HORIZONTAL.png">
+                </div>
+                <div class="links">
+                    <a href="/">GGCon</a>
+                    <a href="/talents/" data-short="Talents">Talents</a>
+                    <a href="/vapanels/" data-short="VAPanels">VA Panels</a>
+                    <a href="/vtuberpanels/" data-short="VTuberPanels">VTuber Panels</a>
+                    <a href="/tournaments/" data-short="Tournaments">Tournaments</a>
+                    <a href="/schedule/" data-short="Schedule">Schedule</a>
+                    <a href="/about/" data-short="About">About</a>
+                </div>
+                <a class="register-button" href="https://www.eventbrite.com/e/gaucho-gaming-con-2026-sponsored-by-seasonic-tickets-1988114019551" target="_blank">Register Now</a>
+            </nav>
+        </div>
+        <div class="header-container mobile" data-pageType="" data-layout="base" data-custom_js="">
+
+            <nav>
+                <div class="links">
+                    <a href="/">GGCon</a>
+                    <a href="/talents/" data-short="Talents">Talents</a>
+                    <a href="/workshops/" data-short="Workshops">Workshop/Panels</a>
+                    <a href="/schedule/" data-short="Schedule">Schedule</a>
+                    <a href="/eventmap/" data-short="EventMap">Event Map</a>
+                    <a href="/about/" data-short="About">About</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div id="content-container" class="content-loading">
+        <h1 id="registration">Registration</h1>
+<p>RSVP to Gaucho Gaming Con 2026, sponsored by Seasonic! A ticket is <strong>mandatory</strong> in order to participate in any convention events, including any of our FOUR talent panels!</p>
+
+<div class="break"></div>
+
+<p>Check-in at Corwin Pavilion, where you can show your ticket for entry.</p>
+
+<div class="break"></div>
+
+<p><a class="homepage-button register-button" href="https://www.eventbrite.com/e/gaucho-gaming-con-2026-sponsored-by-seasonic-tickets-1988114019551" target="_blank">Register Now</a></p>
+
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-sponsors">
+                <div class="footer-sponsors-title">Thank You to Our Sponsors</div>
+                <div class="sponsors-container">
+                    <img src="/assets/Website Pictures/Sponsor Assets/Seasonic/Logo/logo.png" alt="GGCon Sponsor" class="sponsor-logo large">
+                    <img src="/assets/Website Pictures/Sponsor Assets/AVerMedia/AVerMedia LOGO_white_2023_no background.png" alt="GGCon Sponsor" class="sponsor-logo medium">
+                    <img src="/assets/Website Pictures/Sponsor Assets/Corsair/CRSR_2025_logo_W_stacked(1).png" alt="GGCon Sponsor" class="sponsor-logo small">
+                    <img src="/assets/Website Pictures/Sponsor Assets/Gen.G/GENGLOGO_BLACK.png" alt="GGCon Sponsor" class="sponsor-logo small">
+                    <img src="/assets/Website Pictures/Sponsor Assets/Shure/Raster/JPG/shure_tile_rgb.jpg" alt="GGCon Sponsor" class="sponsor-logo small">
+                </div>
+            </div>
+            <nav>
+                <div class="links">
+                    <a href="https://discord.gg/25AXjN8TBN" target="_blank" class="fa-brands fa-discord"></a>
+                    <a href="https://twitter.com/gauchogaming?lang=en" target="_blank" class="fa-brands fa-x"></a>
+                    <a href="https://instagram.com/GauchoGaming" target="_blank" class="fa-brands fa-instagram"></a>
+                    <a href="https://www.tiktok.com/@gaucho_gaming" target="_blank" class="fa-brands fa-tiktok"></a>
+                    <a href="https://www.facebook.com/GauchoGaming" target="_blank" class="fa-brands fa-facebook"></a>
+                    <a href="https://www.twitch.tv/gaucho_gaming" target="_blank" class="fa-brands fa-twitch"></a>
+                </div>
+            </nav>
+        </div>
+        <div class="footer-container mobile">
+            <nav>
+                <div class="links">
+                    <a href="https://discord.gg/25AXjN8TBN" target="_blank" class="fa-brands fa-discord"></a>
+                    <a href="https://twitter.com/gauchogaming?lang=en" target="_blank" class="fa-brands fa-x"></a>
+                    <a href="https://instagram.com/GauchoGaming" target="_blank" class="fa-brands fa-instagram"></a>
+                    <a href="https://www.tiktok.com/@gaucho_gaming" target="_blank" class="fa-brands fa-tiktok"></a>
+                    <a href="https://www.facebook.com/GauchoGaming" target="_blank" class="fa-brands fa-facebook"></a>
+                    <a href="https://www.twitch.tv/gaucho_gaming" target="_blank" class="fa-brands fa-twitch"></a>
+                </div>
+            </nav>
+        </div>
+    </footer>
+
+
+</body>
+</html>
+
+
+<script>    
+
+    console.log(document.querySelector('.header-container').dataset.pageType);
+    console.log(document.querySelector('.header-container').dataset.layout);
+
+    if (!document.querySelector('.header-container').dataset.custom_js) {
+        console.log('Removing content-loading class due to custom_js not being set');
+        document.querySelector('#content-container').classList.remove('content-loading');
+    }
+
+    if (document.querySelector('#no-playtesters')) {
+        document.querySelector('#acknowledgements').style.display = 'none';
+    }
+
+    // Toggle notes dropdown
+    function toggleNotes(arrowElement) {
+        const dropdown = arrowElement.parentElement.querySelector('.notes-dropdown');
+        const isVisible = dropdown.style.display !== 'none';
+        
+        if (isVisible) {
+            dropdown.style.display = 'none';
+            arrowElement.textContent = '▶';
+        } else {
+            dropdown.style.display = 'block';
+            arrowElement.textContent = '▼';
+        }
+    }
+
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        // Auto-load content from data attributes
+        loadAllContent();
+        const html = document.querySelector('html');
+        console.log('Loading content: ' + html.innerHTML);
+        html.innerHTML = convertToDivs(extractContentFromHtml(html.innerHTML));
+        console.log('Loading content: ' + html.innerHTML);
+        document.querySelector('#content-container').classList.remove('content-loading');
+    });
+</script>

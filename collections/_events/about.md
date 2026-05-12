@@ -1,7 +1,8 @@
 ---
 title: About
 short_description: ABOUT SHORT DESCRIPTION
-description: ABOUT LONG DESCRIPTION
+description: Want to know when and where your favorite events are going to happen? Check this page to find out!
+banner_image: /assets/Website Pictures/SCHEDULE_MAP_BANNER.png
 ---
 ## 10:00 AM
 **Doors Open @ Corwin Pavilion (UCEN)**

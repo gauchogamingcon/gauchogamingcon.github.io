@@ -6,12 +6,30 @@ page_type: about
 ---
 <body>
     <div id="header-placeholder"></div>
+    {% assign faq_content = site.faq | where: "title", "FAQ" | first %}
+    {% assign about_content = site.about | where: "title", "About" | first %}
 
     <main class="container">
+        <div class="banner-image-container">        
+            <div class="banner-image">
+                {% assign faq_banner_image = faq_content.banner_image %}
+                <img src="{{ faq_banner_image }}">
+            </div>
+            <div class="banner-info section-content">
+                <div class="banner-title"> About Gaucho Gaming </div>   
+                <div class="banner-description"> {{ about_content.description }} </div>   
+
+            </div>
+        </div>
         <section id="about" class="section">
             <div class="section-content">
-                {% assign about_content = site.about | where: "title", "About" | first %}
                 {{ about_content.content }}
+            </div>
+        </section>
+        <section id="faq" class="section">
+            <div class="section-content">
+                {% assign faq_content = site.faq | where: "title", "FAQ" | first %}
+                {{ faq_content.content }}
             </div>
         </section>  
     </main>

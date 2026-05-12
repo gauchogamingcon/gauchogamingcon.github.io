@@ -6,17 +6,24 @@ page_type: schedule
 ---
 <body>
     <div id="header-placeholder"></div>
+    {% assign events_content = site.events | where: "title", "About" | first %}
 
     <main class="container">
-        <div class="banner-image">
-            <img src="/assets/BANNER.png" alt="GGCon Banner">
-        </div>
-        <section id="about" class="section">
-            <div class="section-content">
-                {% assign about_content = site.events | where: "title", "About" | first %}
-                {{ about_content.content }}
+        <div class="banner-image-container">        
+            <div class="banner-image">
+                {% assign events_banner_image = events_content.banner_image %}
+                <img src="{{ events_banner_image }}">
             </div>
-        </section>  
+            <div class="banner-info section-content">
+                <div class="banner-title"> Events and Schedule </div>   
+                <div class="banner-description"> {{ events_content.description }} </div>   
+
+            </div>
+        </div>
+        <section id="events" class="section">
+            <div class="section-content">
+                {{ events_content.content }}
+            </div>
         </section>  
     </main>
 </body>
