@@ -36,7 +36,7 @@ function convertToDivs(markdown) {
         // Italic
         .replace(/<em>(.*?)<\/em>/gim, '<span class="italic">$1</span>')
         // Links
-        .replace(/<a href="([^"]+)">([^<]+)<\/a>/gim, '<a href="$1" class="link">$2</a>')
+        .replace(/<a href="([^"]+)">([^<]+)<\/a>/gim, '<a href="$1">$2</a>')
         // Clean up empty paragraphs
         .replace(/<div class="paragraph"><\/div>/gim, '')
          // Clean up consecutive <br> tags
@@ -76,7 +76,7 @@ function markdownToHtml(markdown) {
         // Italic
         .replace(/\*(.*?)\*/g, '<span class="italic">$1</span>')
         // Links
-        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="link">$1</a>')
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
         // Line breaks
         .replace(/\n\n/g, '</div><div class="paragraph">')
         .replace(/\n/g, '<br>')

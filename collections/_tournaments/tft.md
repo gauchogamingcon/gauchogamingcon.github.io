@@ -2,7 +2,7 @@
 title: TFT
 short_description: TALENT ABOUT SHORT DESCRIPTION
 description:
-sponsor_logo: /assets/Website Pictures/Sponsor Assets/AVerMedia/AVerMedia LOGO_white_2023_no background.png
+sponsor_logo: "/assets/Website Pictures/Sponsor Assets/AVerMedia/AVerMedia LOGO_white_2023_with background.png"
 ---
 
 ## TFT Tournament, sponsored by AVerMedia

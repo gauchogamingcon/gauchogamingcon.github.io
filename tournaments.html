@@ -22,18 +22,20 @@ page_type: tournaments
         </div>
         <section id="panels" class="section">
             <div class="section-content">
-                {% for panel in site.tournaments %}
-                    <div class="tournament-container">
-                    {% unless panel.title == "About" %}
-                        <div class="tournament-info">
-                            {{ panel.content }}
+                <div class="tournament-containers">
+                    {% for panel in site.tournaments %}
+                        {% unless panel.title == "About" %}
+                        <div class="tournament-container">
+                            <div class="tournament-info">
+                                {{ panel.content }}
+                            </div>
+                            {% if panel.sponsor_logo != ""%}
+                            <img src="{{ panel.sponsor_logo }}" class="sponsor-logo large">
+                            {% endif %}
                         </div>
-                        {% if panel.sponsor_logo != ""%}
-                        <img src="{{ panel.sponsor_logo }}" class="sponsor-logo large">
-                        {% endif %}
-                    {% endunless %}
-                    </div>
-                {% endfor %}
+                        {% endunless %}
+                    {% endfor %}
+                </div>
             </div>
         </section>  
     </main>
